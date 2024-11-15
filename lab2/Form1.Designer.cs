@@ -35,12 +35,16 @@
             this.buttonReadNodeValue = new System.Windows.Forms.Button();
             this.ReadPositionBtn = new System.Windows.Forms.Button();
             this.positionLabel = new System.Windows.Forms.Label();
+            this.nodesListText = new System.Windows.Forms.RichTextBox();
+            this.readNodesBtn = new System.Windows.Forms.Button();
+            this.buttonSubTest = new System.Windows.Forms.Button();
+            this.buttonUnsubTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelConnectionStatus
             // 
             this.labelConnectionStatus.AutoSize = true;
-            this.labelConnectionStatus.Location = new System.Drawing.Point(428, 32);
+            this.labelConnectionStatus.Location = new System.Drawing.Point(127, 16);
             this.labelConnectionStatus.Name = "labelConnectionStatus";
             this.labelConnectionStatus.Size = new System.Drawing.Size(99, 16);
             this.labelConnectionStatus.TabIndex = 0;
@@ -48,7 +52,7 @@
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(558, 23);
+            this.buttonConnect.Location = new System.Drawing.Point(12, 7);
             this.buttonConnect.Name = "buttonConnect";
             this.buttonConnect.Size = new System.Drawing.Size(109, 35);
             this.buttonConnect.TabIndex = 1;
@@ -58,7 +62,7 @@
             // 
             // buttonDisconnect
             // 
-            this.buttonDisconnect.Location = new System.Drawing.Point(558, 64);
+            this.buttonDisconnect.Location = new System.Drawing.Point(12, 48);
             this.buttonDisconnect.Name = "buttonDisconnect";
             this.buttonDisconnect.Size = new System.Drawing.Size(109, 34);
             this.buttonDisconnect.TabIndex = 2;
@@ -69,7 +73,7 @@
             // labelNodeValue
             // 
             this.labelNodeValue.AutoSize = true;
-            this.labelNodeValue.Location = new System.Drawing.Point(225, 230);
+            this.labelNodeValue.Location = new System.Drawing.Point(252, 108);
             this.labelNodeValue.Name = "labelNodeValue";
             this.labelNodeValue.Size = new System.Drawing.Size(107, 16);
             this.labelNodeValue.TabIndex = 3;
@@ -77,7 +81,7 @@
             // 
             // buttonReadNodeValue
             // 
-            this.buttonReadNodeValue.Location = new System.Drawing.Point(350, 213);
+            this.buttonReadNodeValue.Location = new System.Drawing.Point(12, 91);
             this.buttonReadNodeValue.Name = "buttonReadNodeValue";
             this.buttonReadNodeValue.Size = new System.Drawing.Size(234, 50);
             this.buttonReadNodeValue.TabIndex = 4;
@@ -87,7 +91,7 @@
             // 
             // ReadPositionBtn
             // 
-            this.ReadPositionBtn.Location = new System.Drawing.Point(350, 305);
+            this.ReadPositionBtn.Location = new System.Drawing.Point(12, 147);
             this.ReadPositionBtn.Name = "ReadPositionBtn";
             this.ReadPositionBtn.Size = new System.Drawing.Size(234, 46);
             this.ReadPositionBtn.TabIndex = 5;
@@ -98,17 +102,59 @@
             // positionLabel
             // 
             this.positionLabel.AutoSize = true;
-            this.positionLabel.Location = new System.Drawing.Point(202, 320);
+            this.positionLabel.Location = new System.Drawing.Point(252, 162);
             this.positionLabel.Name = "positionLabel";
             this.positionLabel.Size = new System.Drawing.Size(130, 16);
             this.positionLabel.TabIndex = 6;
             this.positionLabel.Text = "Запросите данные";
             // 
+            // nodesListText
+            // 
+            this.nodesListText.Location = new System.Drawing.Point(255, 231);
+            this.nodesListText.Name = "nodesListText";
+            this.nodesListText.Size = new System.Drawing.Size(533, 326);
+            this.nodesListText.TabIndex = 7;
+            this.nodesListText.Text = "";
+            // 
+            // readNodesBtn
+            // 
+            this.readNodesBtn.Location = new System.Drawing.Point(12, 231);
+            this.readNodesBtn.Name = "readNodesBtn";
+            this.readNodesBtn.Size = new System.Drawing.Size(234, 30);
+            this.readNodesBtn.TabIndex = 8;
+            this.readNodesBtn.Text = "Прочитать узлы";
+            this.readNodesBtn.UseVisualStyleBackColor = true;
+            this.readNodesBtn.Click += new System.EventHandler(this.readNodesBtn_Click);
+            // 
+            // buttonSubTest
+            // 
+            this.buttonSubTest.Location = new System.Drawing.Point(652, 58);
+            this.buttonSubTest.Name = "buttonSubTest";
+            this.buttonSubTest.Size = new System.Drawing.Size(124, 30);
+            this.buttonSubTest.TabIndex = 9;
+            this.buttonSubTest.Text = "buttonSubTest";
+            this.buttonSubTest.UseVisualStyleBackColor = true;
+            this.buttonSubTest.Click += new System.EventHandler(this.buttonSubTest_Click);
+            // 
+            // buttonUnsubTest
+            // 
+            this.buttonUnsubTest.Location = new System.Drawing.Point(652, 95);
+            this.buttonUnsubTest.Name = "buttonUnsubTest";
+            this.buttonUnsubTest.Size = new System.Drawing.Size(124, 29);
+            this.buttonUnsubTest.TabIndex = 10;
+            this.buttonUnsubTest.Text = "buttonUnsubTest";
+            this.buttonUnsubTest.UseVisualStyleBackColor = true;
+            this.buttonUnsubTest.Click += new System.EventHandler(this.buttonUnsubTest_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 569);
+            this.Controls.Add(this.buttonUnsubTest);
+            this.Controls.Add(this.buttonSubTest);
+            this.Controls.Add(this.readNodesBtn);
+            this.Controls.Add(this.nodesListText);
             this.Controls.Add(this.positionLabel);
             this.Controls.Add(this.ReadPositionBtn);
             this.Controls.Add(this.buttonReadNodeValue);
@@ -132,6 +178,10 @@
         private System.Windows.Forms.Button buttonReadNodeValue;
         private System.Windows.Forms.Button ReadPositionBtn;
         private System.Windows.Forms.Label positionLabel;
+        private System.Windows.Forms.RichTextBox nodesListText;
+        private System.Windows.Forms.Button readNodesBtn;
+        private System.Windows.Forms.Button buttonSubTest;
+        private System.Windows.Forms.Button buttonUnsubTest;
     }
 }
 
