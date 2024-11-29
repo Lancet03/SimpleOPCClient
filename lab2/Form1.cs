@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Opc.Ua;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,7 @@ namespace lab2
             this.BeginInvoke(new Action(() =>
             {
                 labelNodeValue.Text = e.nodeValue;
+
             }));
         }
 
@@ -95,14 +97,21 @@ namespace lab2
             nodesListText.Text = output;
         }
 
-        OPCUnsubscribeObject _workTimeUnsub = null;
+        List<OPCUnsubscribeObject> _workTimeUnsub = new List<OPCUnsubscribeObject>();
         private void buttonSubTest_Click(object sender, EventArgs e)
         {
             try
             {
                 var unsub = _opcClient.SubscribeNodeValue("ns=1;s=127.0.0.1/WorkTime", 1000);
 
-                if (unsub != null) _workTimeUnsub = unsub;
+                var unsubX = _opcClient.SubscribeNodeValue("ns=1;s=127.0.0.1/Channel 1/Axis 1 (X)/CurPos", 1000);
+                var unsubY = _opcClient.SubscribeNodeValue("ns=1;s=127.0.0.1/Channel 1/Axis 2 (Y)/CurPos", 1000);
+                var unsubZ = _opcClient.SubscribeNodeValue("ns=1;s=127.0.0.1/Channel 1/Axis 3 (Z)/CurPos", 1000);
+
+                if (unsub != null) _workTimeUnsub.Add(unsub);
+                if (unsubX != null) _workTimeUnsub.Add(unsubX);
+                if (unsubY != null) _workTimeUnsub.Add(unsubY);
+                if (unsubZ != null) _workTimeUnsub.Add(unsubZ);
             }
             catch (Exception ex)
             {
@@ -114,9 +123,15 @@ namespace lab2
         {
             try
             {
-                if (_workTimeUnsub != null)
-                {
-                    _workTimeUnsub.Dispose();
+                //if (_workTimeUnsub != null)
+                //{
+                //    _workTimeUnsub.Dispose();
+                //}
+                for (int i = 0; i < _workTimeUnsub.Count; i++) {
+                    if (_workTimeUnsub[i] != null)
+                    {
+                        _workTimeUnsub[i].Dispose();
+                    }
                 }
             }
             catch (Exception ex)
@@ -125,7 +140,7 @@ namespace lab2
             }
             finally
             {
-                _workTimeUnsub = null;
+                _workTimeUnsub.Clear();
             }
         }
     }

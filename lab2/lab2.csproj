@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{E5E31B0C-419B-402F-BB79-CAC799531DEF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SimpleOPCClient</RootNamespace>
-    <AssemblyName>SimpleOPCClient</AssemblyName>
+    <RootNamespace>OPCClientApp</RootNamespace>
+    <AssemblyName>OPCClientApp</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -98,6 +98,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IOPCClientControl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleOPCClient.cs" />

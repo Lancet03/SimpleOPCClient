@@ -203,7 +203,7 @@ namespace lab2
                 sub = new Subscription()
                 {
                     PublishingEnabled = true,
-                    PublishingInterval = 1000,
+                    PublishingInterval = publishingInterval,
                     Priority = 1,
                     KeepAliveCount = 10,
                     LifetimeCount = 30,
