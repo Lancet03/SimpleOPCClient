@@ -39,6 +39,7 @@
             this.readNodesBtn = new System.Windows.Forms.Button();
             this.buttonSubTest = new System.Windows.Forms.Button();
             this.buttonUnsubTest = new System.Windows.Forms.Button();
+            this.progWorkTime1 = new OPCClientApp.ProgWorkTime();
             this.SuspendLayout();
             // 
             // labelConnectionStatus
@@ -128,7 +129,7 @@
             // 
             // buttonSubTest
             // 
-            this.buttonSubTest.Location = new System.Drawing.Point(652, 58);
+            this.buttonSubTest.Location = new System.Drawing.Point(258, 16);
             this.buttonSubTest.Name = "buttonSubTest";
             this.buttonSubTest.Size = new System.Drawing.Size(124, 30);
             this.buttonSubTest.TabIndex = 9;
@@ -138,7 +139,7 @@
             // 
             // buttonUnsubTest
             // 
-            this.buttonUnsubTest.Location = new System.Drawing.Point(652, 95);
+            this.buttonUnsubTest.Location = new System.Drawing.Point(258, 53);
             this.buttonUnsubTest.Name = "buttonUnsubTest";
             this.buttonUnsubTest.Size = new System.Drawing.Size(124, 29);
             this.buttonUnsubTest.TabIndex = 10;
@@ -146,11 +147,19 @@
             this.buttonUnsubTest.UseVisualStyleBackColor = true;
             this.buttonUnsubTest.Click += new System.EventHandler(this.buttonUnsubTest_Click);
             // 
+            // progWorkTime1
+            // 
+            this.progWorkTime1.Location = new System.Drawing.Point(495, 28);
+            this.progWorkTime1.Name = "progWorkTime1";
+            this.progWorkTime1.Size = new System.Drawing.Size(268, 178);
+            this.progWorkTime1.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 569);
+            this.Controls.Add(this.progWorkTime1);
             this.Controls.Add(this.buttonUnsubTest);
             this.Controls.Add(this.buttonSubTest);
             this.Controls.Add(this.readNodesBtn);
@@ -182,6 +191,7 @@
         private System.Windows.Forms.Button readNodesBtn;
         private System.Windows.Forms.Button buttonSubTest;
         private System.Windows.Forms.Button buttonUnsubTest;
+        private ProgWorkTime progWorkTime1;
     }
 }
 

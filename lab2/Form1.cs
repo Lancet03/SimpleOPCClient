@@ -22,6 +22,12 @@ namespace OPCClientApp
             _opcClient = new SimpleOPCClient();
             _opcClient.ConnectComplete += _opcClient_ConnectComplete;
             _opcClient.NodeValueChanged += _opcClient_NodeValueChanged;
+
+            foreach (var control in this.Controls)
+            {
+                if (control is IOPCClientControl)
+                    (control as IOPCClientControl).Init(_opcClient);
+            }
         }
 
         private void _opcClient_NodeValueChanged(object sender, NodeValueChangedEventArgs e)
@@ -127,7 +133,8 @@ namespace OPCClientApp
                 //{
                 //    _workTimeUnsub.Dispose();
                 //}
-                for (int i = 0; i < _workTimeUnsub.Count; i++) {
+                for (int i = 0; i < _workTimeUnsub.Count; i++)
+                {
                     if (_workTimeUnsub[i] != null)
                     {
                         _workTimeUnsub[i].Dispose();
