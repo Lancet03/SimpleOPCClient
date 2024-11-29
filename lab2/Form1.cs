@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static lab2.SimpleOPCClient;
+using static OPCClientApp.SimpleOPCClient;
 
-namespace lab2
+namespace OPCClientApp
 {
     public partial class Form1 : Form
     {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Opc.Ua;
 using System.Diagnostics;
 
-namespace lab2
+namespace OPCClientApp
 {
     internal class NodeValueChangedEventArgs : EventArgs
     {

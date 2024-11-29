@@ -1,4 +1,4 @@
-﻿namespace lab2
+﻿namespace OPCClientApp
 {
     partial class Form1
     {
