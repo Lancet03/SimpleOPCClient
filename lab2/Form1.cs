@@ -34,8 +34,21 @@ namespace OPCClientApp
         {
             this.BeginInvoke(new Action(() =>
             {
-                labelNodeValue.Text = e.nodeValue;
-
+                switch (e.nodeId)
+                {
+                    case "ns=1;s=127.0.0.1/WorkTime":
+                        labelNodeValue.Text = e.nodeValue;
+                        break;
+                    case "ns=1;s=127.0.0.1/Channel 1/Axis 1 (X)/CurPos":
+                        positionLabelX.Text = e.nodeValue;
+                        break;
+                    case "ns=1;s=127.0.0.1/Channel 1/Axis 2 (Y)/CurPos":
+                        positionLabelY.Text = e.nodeValue;
+                        break;
+                    case "ns=1;s=127.0.0.1/Channel 1/Axis 3 (Z)/CurPos":
+                        positionLabelZ.Text = e.nodeValue;
+                        break;
+                }
             }));
         }
 
@@ -88,7 +101,9 @@ namespace OPCClientApp
             string posY = _opcClient.ReadNodeValue("ns=1;s=127.0.0.1/Channel 1/Axis 2 (Y)/CurPos");
             string posZ = _opcClient.ReadNodeValue("ns=1;s=127.0.0.1/Channel 1/Axis 3 (Z)/CurPos");
 
-            positionLabel.Text = $"X = {posX};\n Y = {posY}; \n Z = {posZ}";
+            positionLabelX.Text = $"X = {posX}";
+            positionLabelY.Text = "Y = " + posY;
+            positionLabelZ.Text = "Z = " + posZ;
         }
 
         private void readNodesBtn_Click(object sender, EventArgs e)

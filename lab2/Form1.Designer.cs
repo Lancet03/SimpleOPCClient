@@ -34,13 +34,15 @@
             this.labelNodeValue = new System.Windows.Forms.Label();
             this.buttonReadNodeValue = new System.Windows.Forms.Button();
             this.ReadPositionBtn = new System.Windows.Forms.Button();
-            this.positionLabel = new System.Windows.Forms.Label();
+            this.positionLabelX = new System.Windows.Forms.Label();
             this.nodesListText = new System.Windows.Forms.RichTextBox();
             this.readNodesBtn = new System.Windows.Forms.Button();
             this.buttonSubTest = new System.Windows.Forms.Button();
             this.buttonUnsubTest = new System.Windows.Forms.Button();
             this.progWorkTime1 = new OPCClientApp.ProgWorkTime();
             this.channelSpindleSpeed1 = new OPCClientApp.ChannelSpindleSpeed();
+            this.positionLabelY = new System.Windows.Forms.Label();
+            this.positionLabelZ = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // labelConnectionStatus
@@ -107,15 +109,15 @@
             this.ReadPositionBtn.UseVisualStyleBackColor = true;
             this.ReadPositionBtn.Click += new System.EventHandler(this.ReadPositionBtn_Click);
             // 
-            // positionLabel
+            // positionLabelX
             // 
-            this.positionLabel.AutoSize = true;
-            this.positionLabel.Location = new System.Drawing.Point(189, 132);
-            this.positionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.positionLabel.Name = "positionLabel";
-            this.positionLabel.Size = new System.Drawing.Size(102, 13);
-            this.positionLabel.TabIndex = 6;
-            this.positionLabel.Text = "Запросите данные";
+            this.positionLabelX.AutoSize = true;
+            this.positionLabelX.Location = new System.Drawing.Point(189, 119);
+            this.positionLabelX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.positionLabelX.Name = "positionLabelX";
+            this.positionLabelX.Size = new System.Drawing.Size(26, 13);
+            this.positionLabelX.TabIndex = 6;
+            this.positionLabelX.Text = "X = ";
             // 
             // nodesListText
             // 
@@ -170,23 +172,45 @@
             // channelSpindleSpeed1
             // 
             this.channelSpindleSpeed1.Location = new System.Drawing.Point(79, 462);
-            this.channelSpindleSpeed1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.channelSpindleSpeed1.Margin = new System.Windows.Forms.Padding(2);
             this.channelSpindleSpeed1.Name = "channelSpindleSpeed1";
             this.channelSpindleSpeed1.Size = new System.Drawing.Size(479, 41);
             this.channelSpindleSpeed1.TabIndex = 12;
+            // 
+            // positionLabelY
+            // 
+            this.positionLabelY.AutoSize = true;
+            this.positionLabelY.Location = new System.Drawing.Point(189, 132);
+            this.positionLabelY.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.positionLabelY.Name = "positionLabelY";
+            this.positionLabelY.Size = new System.Drawing.Size(26, 13);
+            this.positionLabelY.TabIndex = 13;
+            this.positionLabelY.Text = "Y = ";
+            // 
+            // positionLabelZ
+            // 
+            this.positionLabelZ.AutoSize = true;
+            this.positionLabelZ.Location = new System.Drawing.Point(189, 145);
+            this.positionLabelZ.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.positionLabelZ.Name = "positionLabelZ";
+            this.positionLabelZ.Size = new System.Drawing.Size(26, 13);
+            this.positionLabelZ.TabIndex = 14;
+            this.positionLabelZ.Text = "Z = ";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 514);
+            this.Controls.Add(this.positionLabelZ);
+            this.Controls.Add(this.positionLabelY);
             this.Controls.Add(this.channelSpindleSpeed1);
             this.Controls.Add(this.progWorkTime1);
             this.Controls.Add(this.buttonUnsubTest);
             this.Controls.Add(this.buttonSubTest);
             this.Controls.Add(this.readNodesBtn);
             this.Controls.Add(this.nodesListText);
-            this.Controls.Add(this.positionLabel);
+            this.Controls.Add(this.positionLabelX);
             this.Controls.Add(this.ReadPositionBtn);
             this.Controls.Add(this.buttonReadNodeValue);
             this.Controls.Add(this.labelNodeValue);
@@ -209,13 +233,15 @@
         private System.Windows.Forms.Label labelNodeValue;
         private System.Windows.Forms.Button buttonReadNodeValue;
         private System.Windows.Forms.Button ReadPositionBtn;
-        private System.Windows.Forms.Label positionLabel;
+        private System.Windows.Forms.Label positionLabelX;
         private System.Windows.Forms.RichTextBox nodesListText;
         private System.Windows.Forms.Button readNodesBtn;
         private System.Windows.Forms.Button buttonSubTest;
         private System.Windows.Forms.Button buttonUnsubTest;
         private ProgWorkTime progWorkTime1;
         private ChannelSpindleSpeed channelSpindleSpeed1;
+        private System.Windows.Forms.Label positionLabelY;
+        private System.Windows.Forms.Label positionLabelZ;
     }
 }
 
