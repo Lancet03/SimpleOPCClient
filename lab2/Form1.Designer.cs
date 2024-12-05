@@ -40,22 +40,25 @@
             this.buttonSubTest = new System.Windows.Forms.Button();
             this.buttonUnsubTest = new System.Windows.Forms.Button();
             this.progWorkTime1 = new OPCClientApp.ProgWorkTime();
+            this.channelSpindleSpeed1 = new OPCClientApp.ChannelSpindleSpeed();
             this.SuspendLayout();
             // 
             // labelConnectionStatus
             // 
             this.labelConnectionStatus.AutoSize = true;
-            this.labelConnectionStatus.Location = new System.Drawing.Point(127, 16);
+            this.labelConnectionStatus.Location = new System.Drawing.Point(95, 13);
+            this.labelConnectionStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelConnectionStatus.Name = "labelConnectionStatus";
-            this.labelConnectionStatus.Size = new System.Drawing.Size(99, 16);
+            this.labelConnectionStatus.Size = new System.Drawing.Size(78, 13);
             this.labelConnectionStatus.TabIndex = 0;
             this.labelConnectionStatus.Text = "Не соединено";
             // 
             // buttonConnect
             // 
-            this.buttonConnect.Location = new System.Drawing.Point(12, 7);
+            this.buttonConnect.Location = new System.Drawing.Point(9, 6);
+            this.buttonConnect.Margin = new System.Windows.Forms.Padding(2);
             this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(109, 35);
+            this.buttonConnect.Size = new System.Drawing.Size(82, 28);
             this.buttonConnect.TabIndex = 1;
             this.buttonConnect.Text = "Соединиться";
             this.buttonConnect.UseVisualStyleBackColor = true;
@@ -63,9 +66,10 @@
             // 
             // buttonDisconnect
             // 
-            this.buttonDisconnect.Location = new System.Drawing.Point(12, 48);
+            this.buttonDisconnect.Location = new System.Drawing.Point(9, 39);
+            this.buttonDisconnect.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDisconnect.Name = "buttonDisconnect";
-            this.buttonDisconnect.Size = new System.Drawing.Size(109, 34);
+            this.buttonDisconnect.Size = new System.Drawing.Size(82, 28);
             this.buttonDisconnect.TabIndex = 2;
             this.buttonDisconnect.Text = "Отключиться";
             this.buttonDisconnect.UseVisualStyleBackColor = true;
@@ -74,17 +78,19 @@
             // labelNodeValue
             // 
             this.labelNodeValue.AutoSize = true;
-            this.labelNodeValue.Location = new System.Drawing.Point(252, 108);
+            this.labelNodeValue.Location = new System.Drawing.Point(189, 88);
+            this.labelNodeValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNodeValue.Name = "labelNodeValue";
-            this.labelNodeValue.Size = new System.Drawing.Size(107, 16);
+            this.labelNodeValue.Size = new System.Drawing.Size(81, 13);
             this.labelNodeValue.TabIndex = 3;
             this.labelNodeValue.Text = "Значение узла";
             // 
             // buttonReadNodeValue
             // 
-            this.buttonReadNodeValue.Location = new System.Drawing.Point(12, 91);
+            this.buttonReadNodeValue.Location = new System.Drawing.Point(9, 74);
+            this.buttonReadNodeValue.Margin = new System.Windows.Forms.Padding(2);
             this.buttonReadNodeValue.Name = "buttonReadNodeValue";
-            this.buttonReadNodeValue.Size = new System.Drawing.Size(234, 50);
+            this.buttonReadNodeValue.Size = new System.Drawing.Size(176, 41);
             this.buttonReadNodeValue.TabIndex = 4;
             this.buttonReadNodeValue.Text = "Прочитать значение узла";
             this.buttonReadNodeValue.UseVisualStyleBackColor = true;
@@ -92,9 +98,10 @@
             // 
             // ReadPositionBtn
             // 
-            this.ReadPositionBtn.Location = new System.Drawing.Point(12, 147);
+            this.ReadPositionBtn.Location = new System.Drawing.Point(9, 119);
+            this.ReadPositionBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ReadPositionBtn.Name = "ReadPositionBtn";
-            this.ReadPositionBtn.Size = new System.Drawing.Size(234, 46);
+            this.ReadPositionBtn.Size = new System.Drawing.Size(176, 37);
             this.ReadPositionBtn.TabIndex = 5;
             this.ReadPositionBtn.Text = "Прочитать координаты шпинделя";
             this.ReadPositionBtn.UseVisualStyleBackColor = true;
@@ -103,25 +110,28 @@
             // positionLabel
             // 
             this.positionLabel.AutoSize = true;
-            this.positionLabel.Location = new System.Drawing.Point(252, 162);
+            this.positionLabel.Location = new System.Drawing.Point(189, 132);
+            this.positionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.positionLabel.Name = "positionLabel";
-            this.positionLabel.Size = new System.Drawing.Size(130, 16);
+            this.positionLabel.Size = new System.Drawing.Size(102, 13);
             this.positionLabel.TabIndex = 6;
             this.positionLabel.Text = "Запросите данные";
             // 
             // nodesListText
             // 
-            this.nodesListText.Location = new System.Drawing.Point(255, 231);
+            this.nodesListText.Location = new System.Drawing.Point(191, 188);
+            this.nodesListText.Margin = new System.Windows.Forms.Padding(2);
             this.nodesListText.Name = "nodesListText";
-            this.nodesListText.Size = new System.Drawing.Size(533, 326);
+            this.nodesListText.Size = new System.Drawing.Size(401, 266);
             this.nodesListText.TabIndex = 7;
             this.nodesListText.Text = "";
             // 
             // readNodesBtn
             // 
-            this.readNodesBtn.Location = new System.Drawing.Point(12, 231);
+            this.readNodesBtn.Location = new System.Drawing.Point(9, 188);
+            this.readNodesBtn.Margin = new System.Windows.Forms.Padding(2);
             this.readNodesBtn.Name = "readNodesBtn";
-            this.readNodesBtn.Size = new System.Drawing.Size(234, 30);
+            this.readNodesBtn.Size = new System.Drawing.Size(176, 24);
             this.readNodesBtn.TabIndex = 8;
             this.readNodesBtn.Text = "Прочитать узлы";
             this.readNodesBtn.UseVisualStyleBackColor = true;
@@ -129,9 +139,10 @@
             // 
             // buttonSubTest
             // 
-            this.buttonSubTest.Location = new System.Drawing.Point(258, 16);
+            this.buttonSubTest.Location = new System.Drawing.Point(194, 13);
+            this.buttonSubTest.Margin = new System.Windows.Forms.Padding(2);
             this.buttonSubTest.Name = "buttonSubTest";
-            this.buttonSubTest.Size = new System.Drawing.Size(124, 30);
+            this.buttonSubTest.Size = new System.Drawing.Size(93, 24);
             this.buttonSubTest.TabIndex = 9;
             this.buttonSubTest.Text = "buttonSubTest";
             this.buttonSubTest.UseVisualStyleBackColor = true;
@@ -139,9 +150,10 @@
             // 
             // buttonUnsubTest
             // 
-            this.buttonUnsubTest.Location = new System.Drawing.Point(258, 53);
+            this.buttonUnsubTest.Location = new System.Drawing.Point(194, 43);
+            this.buttonUnsubTest.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUnsubTest.Name = "buttonUnsubTest";
-            this.buttonUnsubTest.Size = new System.Drawing.Size(124, 29);
+            this.buttonUnsubTest.Size = new System.Drawing.Size(93, 24);
             this.buttonUnsubTest.TabIndex = 10;
             this.buttonUnsubTest.Text = "buttonUnsubTest";
             this.buttonUnsubTest.UseVisualStyleBackColor = true;
@@ -149,16 +161,26 @@
             // 
             // progWorkTime1
             // 
-            this.progWorkTime1.Location = new System.Drawing.Point(495, 28);
+            this.progWorkTime1.Location = new System.Drawing.Point(371, 23);
+            this.progWorkTime1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.progWorkTime1.Name = "progWorkTime1";
-            this.progWorkTime1.Size = new System.Drawing.Size(268, 178);
+            this.progWorkTime1.Size = new System.Drawing.Size(201, 145);
             this.progWorkTime1.TabIndex = 11;
+            // 
+            // channelSpindleSpeed1
+            // 
+            this.channelSpindleSpeed1.Location = new System.Drawing.Point(79, 462);
+            this.channelSpindleSpeed1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.channelSpindleSpeed1.Name = "channelSpindleSpeed1";
+            this.channelSpindleSpeed1.Size = new System.Drawing.Size(479, 41);
+            this.channelSpindleSpeed1.TabIndex = 12;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 569);
+            this.ClientSize = new System.Drawing.Size(601, 514);
+            this.Controls.Add(this.channelSpindleSpeed1);
             this.Controls.Add(this.progWorkTime1);
             this.Controls.Add(this.buttonUnsubTest);
             this.Controls.Add(this.buttonSubTest);
@@ -171,6 +193,7 @@
             this.Controls.Add(this.buttonDisconnect);
             this.Controls.Add(this.buttonConnect);
             this.Controls.Add(this.labelConnectionStatus);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -192,6 +215,7 @@
         private System.Windows.Forms.Button buttonSubTest;
         private System.Windows.Forms.Button buttonUnsubTest;
         private ProgWorkTime progWorkTime1;
+        private ChannelSpindleSpeed channelSpindleSpeed1;
     }
 }
 

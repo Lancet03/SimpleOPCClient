@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static OPCClientApp.SimpleOPCClient;
+
 namespace OPCClientApp
 {
-    public partial class ProgWorkTime : UserControl, IOPCClientControl
+    public partial class ChannelSpindleSpeed : UserControl, IOPCClientControl
     {
-        private SimpleOPCClient _client; 
+        private SimpleOPCClient _client;
         private List<OPCUnsubscribeObject> _subscriptions = new List<OPCUnsubscribeObject>();
-        public ProgWorkTime() { InitializeComponent(); }
+
+        public ChannelSpindleSpeed()
+        {
+            InitializeComponent();
+        }
+
         void IOPCClientControl.Init(SimpleOPCClient client)
         {
             _subscriptions.Clear(); _client = client;
@@ -24,20 +31,18 @@ namespace OPCClientApp
                 _client.NodeValueChanged += _client_NodeValueChanged;
             }
         }
+
         private void _client_NodeValueChanged(object sender, NodeValueChangedEventArgs e)
         {
             this.BeginInvoke(new Action(() =>
             {
                 switch (e.nodeId)
                 {
-                    case "ns=1;s=127.0.0.1/WorkTime":
-                        labelWorkTime.Text = e.nodeValue;
+                    case "ns=1;s=127.0.0.1/Channel 1/Spindle override":
+                        labelPersent.Text = e.nodeValue;
                         break;
-                    case "ns=1;s=127.0.0.1/Channel 1/Program work time":
-                        labelProgWorkTime.Text = e.nodeValue;
-                        break;
-                    case "ns=1;s=127.0.0.1/Channel 1/Program percent":
-                        progressBarProgPercent.Value = int.Parse(e.nodeValue);
+                    case "ns=1;s=127.0.0.1/Channel 1/Axis 5 (S1)/CurVel":
+                        progressBarRPM.Value = int.Parse(e.nodeValue.Split(',')[0]);
                         break;
                 }
             }));
@@ -46,9 +51,8 @@ namespace OPCClientApp
         {
             if (_client.ConnectionStatus == true)
             {
-                _subscriptions.Add(_client.SubscribeNodeValue("ns=1;s=127.0.0.1/WorkTime", 1000));
-                _subscriptions.Add(_client.SubscribeNodeValue("ns=1;s=127.0.0.1/Channel 1/Program work time", 1000));
-                _subscriptions.Add(_client.SubscribeNodeValue("ns=1;s=127.0.0.1/Channel 1/Program percent", 1000));
+                _subscriptions.Add(_client.SubscribeNodeValue("ns=1;s=127.0.0.1/Channel 1/Spindle override", 1000));
+                _subscriptions.Add(_client.SubscribeNodeValue("ns=1;s=127.0.0.1/Channel 1/Axis 5 (S1)/CurVel", 1000));
             }
             else
             {

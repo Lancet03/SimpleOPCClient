@@ -60,7 +60,7 @@
             this.labelWorkTime.Name = "labelWorkTime";
             this.labelWorkTime.Size = new System.Drawing.Size(318, 82);
             this.labelWorkTime.TabIndex = 0;
-            this.labelWorkTime.Text = "label1";
+            this.labelWorkTime.Text = "Время работы";
             this.labelWorkTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelProgWorkTime
@@ -71,7 +71,7 @@
             this.labelProgWorkTime.Name = "labelProgWorkTime";
             this.labelProgWorkTime.Size = new System.Drawing.Size(318, 82);
             this.labelProgWorkTime.TabIndex = 1;
-            this.labelProgWorkTime.Text = "label2";
+            this.labelProgWorkTime.Text = "Время выполнения программы";
             this.labelProgWorkTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // progressBarProgPercent

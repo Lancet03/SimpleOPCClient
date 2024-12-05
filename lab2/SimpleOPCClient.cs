@@ -110,8 +110,6 @@ namespace OPCClientApp
             return InternalConnect("opc.tcp://127.0.0.1:4840", false, 0);
         }
 
-
-
         public SimpleOPCClient()
         {
             application = new ApplicationInstance();
