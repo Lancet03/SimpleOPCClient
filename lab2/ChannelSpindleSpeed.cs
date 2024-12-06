@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static OPCClientApp.SimpleOPCClient;
 
@@ -42,6 +35,7 @@ namespace OPCClientApp
                         labelPersent.Text = e.nodeValue;
                         break;
                     case "ns=1;s=127.0.0.1/Channel 1/Axis 5 (S1)/CurVel":
+                        labelBarRPM.Text = e.nodeValue;
                         progressBarRPM.Value = int.Parse(e.nodeValue.Split(',')[0]);
                         break;
                 }
